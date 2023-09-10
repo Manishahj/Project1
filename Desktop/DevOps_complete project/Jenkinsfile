@@ -11,11 +11,11 @@ pipeline {
     stages {
         stage('SCM Preparation') {
             steps {
-                echo "BranchName: ${main}"
+                echo "BranchName: ${Branch1}"
                 echo "Code Update Started"
                 checkout([$class: 'GitSCM',
-                          branches: [[name: "${main}"]],
-                          userRemoteConfigs: [[url: 'https://github.com/VenkataManeesh/docker_demo.git']]])
+                          branches: [[name: "${Branch1}"]],
+                          userRemoteConfigs: [[url: 'https://github.com/Manishahj/CompleteProject/tree/Branch1/Desktop/DevOps_complete%20project']]])
                 echo "Code Update End"
             }
         }
